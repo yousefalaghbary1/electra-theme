@@ -9905,15 +9905,28 @@ salla-product-options [type=checkbox], salla-product-options [type=radio]{backgr
 /* ----------------------------------------
    LOGO SIZE
 ----------------------------------------- */
+
 img.logo {
-  height: 60px;
-  width: 60px;
+  /* Mobile-first default */
+  height: 50px;
+  width: 50px;
+  /* Maintain aspect ratio */
+  object-fit: contain;
 }
 
-@media (max-width: 1024px) {
+/* Tablet devices */
+@media (min-width: 768px) {
   img.logo {
- height: 70px;
-  width: 70px;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* Desktop devices */
+@media (min-width: 1024px) {
+  img.logo {
+    height: 70px;
+    width: 70px;
   }
 }
 
